@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions S.A.S.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>TechSolutions S.A.S.</h2>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" id="navButton">Inicio</a></li>
+                <li><a href="#">Estudiantes</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Profesores</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="Login.html" class="btn-login">Iniciar Sesión</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Gestión Académica Inteligente</h1>
+            <p>
+                Administra estudiantes, cursos, profesores y calificaciones
+                de manera rápida, segura y eficiente.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Comenzar</a>
+                <a href="#" class="btn-secondary">Ver Más</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Gestión académica">
+        </div>
+    </section>
+
+    <!-- CARDS -->
+    <section class="services">
+
+        <div class="card">
+            <h3>Gestión de Estudiantes</h3>
+            <p>
+                Registra y administra información académica de estudiantes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Control de Cursos</h3>
+            <p>
+                Organiza materias, horarios y asignaciones fácilmente.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Reportes Académicos</h3>
+            <p>
+                Genera informes y estadísticas en tiempo real.
+            </p>
+        </div>
+
+    </section>
+
+    <script>
+
+        // Revisar si ya inició sesión
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        // Seleccionar botón
+        const navButton = document.getElementById("navButton");
+
+        // Cambiar a Dashboard
+        if (isLoggedIn === "true") {
+
+            navButton.innerHTML = "Dashboard";
+
+            navButton.href = "dashboard.html";
+        }
+
+    </script>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 TechSolutions S.A.S. | Todos los derechos reservados.</p>
+    </footer>
+ <script src="js/script.js"></script>
+</body>
+
+</html>

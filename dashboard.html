@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | TechSolutions S.A.S.</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <h2>TechSolutions</h2>
+
+            <ul>
+
+                <li><a href="#">🏠 Inicio</a></li>
+                <li><a href="#">🎓 Estudiantes</a></li>
+                <li><a href="#">👨‍🏫 Profesores</a></li>
+                <li><a href="#">📚 Cursos</a></li>
+                <li><a href="#">📝 Notas</a></li>
+                <li><a href="#">📊 Reportes</a></li>
+
+            </ul>
+
+        </div>
+
+        <a href="#" class="logout">Cerrar Sesión</a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard Académico</h1>
+                <p>Sistema de Gestión - TechSolutions S.A.S.</p>
+            </div>
+
+            <div class="profile">
+
+                <img src="https://i.pravatar.cc/100" alt="profile">
+
+                <div>
+                    <h3>Administrador</h3>
+                    <span>Online</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- INFO PANEL -->
+
+        <section class="info-panel">
+
+            <h3 id="fecha"></h3>
+
+            <p id="mensaje"></p>
+
+            <h3 id="reloj"></h3>
+
+        </section>
+
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h2 class="number" data-target="1250">0</h2>
+
+                <p>Estudiantes</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 class="number" data-target="85">0</h2>
+
+                <p>Profesores</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 class="number" data-target="42">0</h2>
+
+                <p>Cursos Activos</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 class="number" data-target="96">0</h2>
+
+                <p>Rendimiento</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+
+        <section class="progress-section">
+
+            <h2>Rendimiento General del Sistema</h2>
+
+            <div class="progress-container">
+
+                <div class="progress-bar" id="barra">
+                    0%
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TABLE -->
+
+        <section class="table-section">
+
+            <h2>Mejores Estudiantes</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Curso</th>
+                        <th>Promedio</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="tabla-estudiantes">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/das.js"></script>
+
+</body>
+
+</html>
