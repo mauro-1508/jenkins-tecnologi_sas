@@ -198,4 +198,4 @@ setInterval(() => {
     }
 
 }, 3000);
-const cards = document.querySelectorAll(".card");
+
