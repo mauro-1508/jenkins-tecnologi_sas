@@ -50,7 +50,7 @@ pipeline {
 
                 Revisa Jenkins para más detalles.
                 """,
-                to: "suazasolorzanoj@gmail.com"
+                to: "suazasolorzano@gmail.com"
             )
         }
 
@@ -68,7 +68,7 @@ pipeline {
 
                 Revisa Jenkins.
                 """,
-                to: "suazasolorzanoj@gmail.com"
+                to: "suazasolorzano@gmail.com"
             )
         }
 
@@ -79,7 +79,7 @@ pipeline {
             emailext(
                 subject: "⚠️ Pipeline Inestable - ${env.JOB_NAME}",
                 body: "El pipeline quedó inestable.",
-                to: "suazasolorzanoj@gmail.com"
+                to: "suazasolorzano@gmail.com"
             )
         }
     }
