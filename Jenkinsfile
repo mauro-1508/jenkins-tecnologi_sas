@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+     DISCORD_WEBHOOK = credentials('discord-webhook')
+    }
 
     stages {
 
@@ -52,6 +55,14 @@ pipeline {
                 """,
                 to: "suazasolorzanoj@gmail.com"
             )
+             discordSend(
+            description: "✅ Build exitoso",
+            footer: "tecnologi-sas CI/CD",
+            link: env.BUILD_URL,
+            result: currentBuild.currentResult,
+            title: "Build SUCCESS",
+            webhookURL: env.DISCORD_WEBHOOK
+        )
         }
 
         failure {
@@ -70,6 +81,14 @@ pipeline {
                 """,
                 to: "suazasolorzanoj@gmail.com"
             )
+            discordSend(
+            description: "❌ Build falló",
+            footer: "tecnologi-sas CI/CD",
+            link: env.BUILD_URL,
+            result: currentBuild.currentResult,
+            title: "Build FAILURE",
+            webhookURL: env.DISCORD_WEBHOOK
+        )
         }
 
         unstable {
