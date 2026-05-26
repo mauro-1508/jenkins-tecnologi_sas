@@ -37,15 +37,50 @@ pipeline {
     post {
 
         success {
+
             echo 'Pipeline exitoso'
+
+            emailext(
+                subject: "✅ Pipeline Exitoso - ${env.JOB_NAME}",
+                body: """
+                El pipeline finalizó correctamente.
+
+                Proyecto: ${env.JOB_NAME}
+                Build: ${env.BUILD_NUMBER}
+
+                Revisa Jenkins para más detalles.
+                """,
+                to: "suazasolorzanoj@gmail.com"
+            )
         }
 
         failure {
+
             echo 'Pipeline falló'
+
+            emailext(
+                subject: "❌ Pipeline Falló - ${env.JOB_NAME}",
+                body: """
+                El pipeline falló.
+
+                Proyecto: ${env.JOB_NAME}
+                Build: ${env.BUILD_NUMBER}
+
+                Revisa Jenkins.
+                """,
+                to: "suazasolorzanoj@gmail.com"
+            )
         }
 
         unstable {
+
             echo 'Pipeline inestable'
+
+            emailext(
+                subject: "⚠️ Pipeline Inestable - ${env.JOB_NAME}",
+                body: "El pipeline quedó inestable.",
+                to: "suazasolorzanoj@gmail.com"
+            )
         }
     }
 }
